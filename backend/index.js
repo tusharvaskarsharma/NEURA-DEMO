@@ -17,6 +17,12 @@ app.get('/', (req, res) => {
   res.json({ message: 'Backend Server is running' });
 });
 
+// Database Connection
+mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/neura-demo')
+  .then(() => console.log('MongoDB connected successfully'))
+  .catch((err) => console.error('MongoDB connection error:', err));
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
