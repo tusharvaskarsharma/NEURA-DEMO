@@ -25,7 +25,7 @@ export default function Dashboard() {
       }
 
       const user = JSON.parse(userStr);
-      if (user.role !== 'customer') {
+      if (user.role.toLowerCase() !== 'customer') {
         return router.push('/login');
       }
 

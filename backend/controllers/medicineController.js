@@ -35,3 +35,12 @@ exports.getUserMedicines = async (req, res) => {
     res.status(500).json({ message: 'Server error', error: error.message });
   }
 };
+
+exports.getAllMedicines = async (req, res) => {
+  try {
+    const medicines = await Medicine.find().populate('userId', 'name email');
+    res.status(200).json(medicines);
+  } catch (error) {
+    res.status(500).json({ message: 'Server error', error: error.message });
+  }
+};
