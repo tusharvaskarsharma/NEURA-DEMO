@@ -3,6 +3,7 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const authRoutes = require('./routes/authRoutes');
+const medicineRoutes = require('./routes/medicineRoutes');
 
 dotenv.config();
 
@@ -21,6 +22,7 @@ mongoose.connect(MONGO_URI)
 
 // Routes
 app.use('/auth', authRoutes);
+app.use('/medicine', medicineRoutes);
 
 // Basic Route
 app.get('/', (req, res) => {
