@@ -1,0 +1,41 @@
+{
+  "name": "projects/13929443783760429526",
+  "projectId": "13929443783760429526",
+  "title": "MEDICARE Web Dashboard",
+  "visibility": "PRIVATE",
+  "createTime": "2026-03-12T17:50:54.606286Z",
+  "updateTime": "2026-03-12T17:51:24.498112Z",
+  "projectType": "PROJECT_DESIGN",
+  "origin": "STITCH",
+  "deviceType": "DESKTOP",
+  "designTheme": {
+    "colorMode": "LIGHT",
+    "font": "PUBLIC_SANS",
+    "roundness": "ROUND_TWELVE",
+    "customColor": "#10b77f",
+    "saturation": 3
+  },
+  "screens": {
+    "web_dashboard_home": {
+      "id": "dce06ca958454b85acdc1f2e60b3e58d",
+      "sourceScreen": "projects/13929443783760429526/screens/dce06ca958454b85acdc1f2e60b3e58d",
+      "width": 2560,
+      "height": 2048
+    },
+    "web_inventory": {
+      "id": "35fed43c4c7a4fafb16ab24b2a7e2da4",
+      "sourceScreen": "projects/13929443783760429526/screens/35fed43c4c7a4fafb16ab24b2a7e2da4",
+      "width": 2560,
+      "height": 2048
+    },
+    "web_donation_hub": {
+      "id": "f70d5dc5298741aab0f396c8621fb8a7",
+      "sourceScreen": "projects/13929443783760429526/screens/f70d5dc5298741aab0f396c8621fb8a7",
+      "width": 2560,
+      "height": 2048
+    }
+  },
+  "metadata": {
+    "userRole": "OWNER"
+  }
+}

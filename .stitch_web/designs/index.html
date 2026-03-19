@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDICARE Web Dashboard Prototypes</title>
+    <style>
+        body { 
+            font-family: 'Inter', 'Public Sans', system-ui, sans-serif; 
+            background-color: #F9FAFB; 
+            color: #1F2937; 
+            padding: 2rem; 
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #111827;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+        a { 
+            color: #1F2937; 
+            text-decoration: none; 
+            font-size: 1.2rem; 
+            display: block; 
+            margin: 1rem 0; 
+            padding: 1.5rem; 
+            background: #FFFFFF; 
+            border-radius: 16px; 
+            border: 1px solid #E5E7EB; 
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+        a:hover { 
+            border-color: #10B981; 
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .subtitle {
+            font-size: 0.95rem;
+            color: #6B7280;
+            margin-top: 0.5rem;
+            display: block;
+        }
+        .icon {
+            color: #10B981;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>MEDICARE Web Dashboard Prototypes</h1>
+    <a href="dashboard.html">
+        <span class="icon">📊</span> 1. Analytics Dashboard (Home)
+        <span class="subtitle">High-level metrics, trends, and recent alerts.</span>
+    </a>
+    <a href="inventory.html">
+        <span class="icon">📦</span> 2. Inventory Management
+        <span class="subtitle">Medicine tracking table and scanner interface.</span>
+    </a>
+    <a href="donation_hub.html">
+        <span class="icon">🤝</span> 3. Donation Hub & Matching
+        <span class="subtitle">Automated matching of supply with NGO demand.</span>
+    </a>
+</body>
+</html>

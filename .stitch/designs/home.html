@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Medicare Premium Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2950bc",
+                        "accent-purple": "#7C3AED",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#0B0F19",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-nav {
+            background: rgba(11, 15, 25, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-border {
+            position: relative;
+            background: linear-gradient(#0B0F19, #0B0F19) padding-box,
+                        linear-gradient(to right, #2A52BE, #7C3AED) border-box;
+            border: 2px solid transparent;
+        }
+        .neon-glow {
+            box-shadow: 0 0 15px rgba(124, 58, 237, 0.4);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen pb-24">
+<!-- Header Section -->
+<header class="flex items-center p-6 justify-between sticky top-0 z-50 bg-background-dark/50 backdrop-blur-md">
+<div class="flex items-center gap-3">
+<div class="size-12 rounded-full overflow-hidden border-2 border-primary/30">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="Professional male portrait for user profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkd9jSl04iTrnLSIOn4L9IDm0DIKDwul-5H1UlCJ1o45Dv-HtmfgLedICillXHx7aqPcwRaRniUWie-srz1fDalKkURE9Kur1SxgH2hc1li4CRrTeK4iiuJLDlZPjbp61x5fie9JZheUzbqcBGVWEACBn8gTHBqAqsvypNBbwxaoN51iLJ3P5g3UOHYv-VQk7yhYkG30bfLs-bYODYBHm2G65n0eyKGv-wSREU6-LX5VzfeuMoRGNk_aaL5jhgH8iwTw1HwiXP_po"/>
+</div>
+<div>
+<p class="text-slate-400 text-xs font-medium uppercase tracking-wider">Welcome back</p>
+<h2 class="text-white text-xl font-bold leading-tight">Alex Sterling</h2>
+</div>
+</div>
+<button class="size-11 flex items-center justify-center rounded-full glass text-slate-100 hover:bg-white/10 transition-colors relative">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+<span class="absolute top-2.5 right-2.5 size-2 bg-red-500 rounded-full border-2 border-background-dark"></span>
+</button>
+</header>
+<main class="px-6 space-y-8">
+<!-- Impact Summary Card -->
+<section>
+<div class="gradient-border rounded-xl p-5 flex flex-col gap-4 shadow-2xl">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-slate-400 text-sm font-medium">Medicine Impact</p>
+<h3 class="text-2xl font-bold text-white mt-1">15 Units Donated</h3>
+</div>
+<div class="bg-primary/20 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary">volunteer_activism</span>
+</div>
+</div>
+<div class="flex gap-6 py-2">
+<div class="flex flex-col">
+<span class="text-xs text-slate-400">Value Saved</span>
+<span class="text-lg font-semibold text-white">₹1,200</span>
+</div>
+<div class="flex flex-col border-l border-white/10 pl-6">
+<span class="text-xs text-slate-400">Lives Helped</span>
+<span class="text-lg font-semibold text-white">5</span>
+</div>
+</div>
+<!-- Subtle Sparkline Visualization -->
+<div class="w-full h-12 flex items-end gap-1.5 mt-2">
+<div class="flex-1 bg-primary/20 h-4 rounded-t-sm"></div>
+<div class="flex-1 bg-primary/30 h-6 rounded-t-sm"></div>
+<div class="flex-1 bg-primary/40 h-10 rounded-t-sm"></div>
+<div class="flex-1 bg-primary/20 h-5 rounded-t-sm"></div>
+<div class="flex-1 bg-accent-purple/50 h-8 rounded-t-sm"></div>
+<div class="flex-1 bg-accent-purple/70 h-12 rounded-t-sm"></div>
+<div class="flex-1 bg-accent-purple h-9 rounded-t-sm"></div>
+</div>
+</div>
+</section>
+<!-- Quick Actions -->
+<section>
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-lg font-bold text-white">Quick Actions</h3>
+</div>
+<div class="flex gap-3 overflow-x-auto pb-2 no-scrollbar">
+<button class="flex h-11 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-5 text-white shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-xl">qr_code_scanner</span>
+<span class="text-sm font-semibold">Scan Medicine</span>
+</button>
+<button class="flex h-11 shrink-0 items-center justify-center gap-x-2 rounded-full glass px-5 text-slate-200">
+<span class="material-symbols-outlined text-xl">inventory_2</span>
+<span class="text-sm font-medium">My Inventory</span>
+</button>
+<button class="flex h-11 shrink-0 items-center justify-center gap-x-2 rounded-full glass px-5 text-slate-200">
+<span class="material-symbols-outlined text-xl">person_heart</span>
+<span class="text-sm font-medium">Donate</span>
+</button>
+</div>
+</section>
+<!-- Medicine Alerts Section -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<h3 class="text-lg font-bold text-white">Medicine Alerts</h3>
+<button class="text-primary text-sm font-semibold">View All</button>
+</div>
+<div class="space-y-3">
+<!-- Card 1: Safe -->
+<div class="glass p-4 rounded-xl flex items-center gap-4">
+<div class="size-12 rounded-lg bg-green-500/10 flex items-center justify-center text-green-500">
+<span class="material-symbols-outlined">pill</span>
+</div>
+<div class="flex-1">
+<h4 class="text-white font-semibold">Paracetamol 500mg</h4>
+<p class="text-slate-400 text-xs">Expires in 14 months</p>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 bg-green-500/10 rounded-full border border-green-500/20">
+<div class="size-2 bg-green-500 rounded-full"></div>
+<span class="text-[10px] font-bold text-green-500 uppercase">Safe</span>
+</div>
+</div>
+<!-- Card 2: Expiring Soon -->
+<div class="bg-white/5 border border-yellow-500/30 p-4 rounded-xl flex items-center gap-4 relative overflow-hidden">
+<div class="absolute inset-0 bg-yellow-500/5 pointer-events-none"></div>
+<div class="size-12 rounded-lg bg-yellow-500/10 flex items-center justify-center text-yellow-500">
+<span class="material-symbols-outlined">medical_services</span>
+</div>
+<div class="flex-1">
+<h4 class="text-white font-semibold">Cough Syrup</h4>
+<p class="text-slate-400 text-xs">Expires in 3 days</p>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 bg-yellow-500/10 rounded-full border border-yellow-500/20">
+<div class="size-2 bg-yellow-500 rounded-full animate-pulse"></div>
+<span class="text-[10px] font-bold text-yellow-500 uppercase">Expiring</span>
+</div>
+</div>
+<!-- Card 3: Expired -->
+<div class="glass p-4 rounded-xl flex items-center gap-4 opacity-80">
+<div class="size-12 rounded-lg bg-red-500/10 flex items-center justify-center text-red-500">
+<span class="material-symbols-outlined">dangerous</span>
+</div>
+<div class="flex-1">
+<h4 class="text-white font-semibold">Vitamin C Tablets</h4>
+<p class="text-slate-400 text-xs">Expired on Oct 12</p>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 bg-red-500/10 rounded-full border border-red-500/20">
+<div class="size-2 bg-red-500 rounded-full"></div>
+<span class="text-[10px] font-bold text-red-500 uppercase">Expired</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-[100] px-4 pb-6 pt-2">
+<div class="glass-nav rounded-full flex items-center justify-between px-2 py-2 max-w-md mx-auto shadow-2xl">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 py-1 group" href="#">
+<div class="size-10 flex items-center justify-center rounded-full bg-accent-purple/20 text-accent-purple neon-glow">
+<span class="material-symbols-outlined fill-1">home</span>
+</div>
+<span class="text-[10px] font-bold text-accent-purple uppercase tracking-tighter">Home</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 py-1 text-slate-400 hover:text-white transition-colors" href="#">
+<div class="size-10 flex items-center justify-center rounded-full">
+<span class="material-symbols-outlined">pill</span>
+</div>
+<span class="text-[10px] font-medium uppercase tracking-tighter">Meds</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 py-1 text-slate-400 hover:text-white transition-colors" href="#">
+<div class="size-10 flex items-center justify-center rounded-full">
+<span class="material-symbols-outlined">volunteer_activism</span>
+</div>
+<span class="text-[10px] font-medium uppercase tracking-tighter">Donate</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 py-1 text-slate-400 hover:text-white transition-colors" href="#">
+<div class="size-10 flex items-center justify-center rounded-full">
+<span class="material-symbols-outlined">person</span>
+</div>
+<span class="text-[10px] font-medium uppercase tracking-tighter">Profile</span>
+</a>
+</div>
+</nav>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .fill-1 {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</body></html>
